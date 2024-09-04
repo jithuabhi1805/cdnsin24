@@ -14,8 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Generate QR code *before* the card is flipped
     const qrCodeElement = document.getElementById('qr-code');
-    const qrCodeData = `Patient ID: 123456\nName: John Doe\nDOB: 01/01/1980\nGender: Male\nAddress: 123 Main St, Anytown, USA\nPhone: 123-456-7890\nEmail: john.doe@example.com\nBlood Type: O+\nIncome: 80000`;
-
     // Ensure qrCodeElement is not null
     if (qrCodeElement) {
         QRCode.toCanvas(qrCodeElement, qrCodeData, { width: 150 }, (error) => {
